@@ -1,0 +1,83 @@
+body {
+    background: linear-gradient(-45deg, #1A237E, #0D47A1, #121212, #000);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #fff;
+    overflow: hidden;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.app-container {
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+}
+
+.calculator-body {
+    width: 380px; /* Adjusted width to fit 5 columns more tightly */
+}
+
+.display {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.result {
+    font-size: 60px;
+    font-weight: 300;
+    letter-spacing: -2px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px; /* Slightly reduced gap for tighter fit */
+}
+
+.button {
+    height: 60px;
+    font-size: 24px; /* Adjusted font size slightly */
+    border: none;
+    border-radius: 50%;
+    color: white;
+    background-color: #3f51b5;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s ease;
+}
+
+.button:hover {
+    background-color: #5c6bc0;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button.operator {
+    background-color: #ffb74d;
+    color: #000;
+}
+
+.button.top-row {
+    background-color: #bdbdbd;
+    color: #000;
+}
+
+.button.zero {
+    grid-column: span 2;
+    width: 128px; /* Adjusted width of the zero button */
+    border-radius: 30px;
+    text-align: left;
+    padding-left: 20px;
+}
