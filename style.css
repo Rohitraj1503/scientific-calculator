@@ -26,7 +26,7 @@ body {
 }
 
 .calculator-body {
-    width: 380px; /* Adjusted width to fit 5 columns more tightly */
+    width: 380px;
 }
 
 .display {
@@ -43,12 +43,12 @@ body {
 .buttons {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 10px; /* Slightly reduced gap for tighter fit */
+    gap: 10px;
 }
 
 .button {
     height: 60px;
-    font-size: 24px; /* Adjusted font size slightly */
+    font-size: 24px;
     border: none;
     border-radius: 50%;
     color: white;
@@ -73,11 +73,4 @@ body {
     background-color: #bdbdbd;
     color: #000;
 }
-
-.button.zero {
-    grid-column: span 2;
-    width: 128px; /* Adjusted width of the zero button */
-    border-radius: 30px;
-    text-align: left;
-    padding-left: 20px;
-}
+/* No specific sizing for individual buttons anymore to make them all equal */
